@@ -1,13 +1,14 @@
 FROM nodered/node-red
 
-ENV NODE_RED_ENABLE_SAFE_MODE=false
-ENV FLOWS=flow.json
+ENV FLOWS=flow.js
 
-COPY package.json .
-RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
-
+# copy node-red project files into place
+COPY flows.json /data/flows.json
+COPY flows_cred.json /data/flows_cred.json
 COPY settings.js /data/settings.js
-COPY flow_cred.json /data/flow_cred.json
-COPY flow.json /data/flow.json
+
+# copy package.json to the WORKDIR so npm builds for node-red
+COPY package.json .
+RUN npm install --unsafe-perm --no-update-notifier --no-audit --only=production
 
 CMD ["npm", "start"]
