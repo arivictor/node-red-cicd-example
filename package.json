@@ -5,12 +5,6 @@
     "dependencies": {
         "node-red": "2.2.1",
     },
-    "node-red": {
-        "settings": {
-            "flowFile": "flow.json",
-            "credentialsFile": "flow_cred.json"
-        }
-    },
     "scripts": {
         "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
     }
