@@ -16,11 +16,11 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 380,
+        "x": 220,
         "y": 200,
         "wires": [
             [
-                "3057ecc25e3b0fad"
+                "7d7e217167b978d8"
             ]
         ]
     },
@@ -31,8 +31,27 @@
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 640,
+        "x": 540,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "7d7e217167b978d8",
+        "type": "template",
+        "z": "3728edd405527f57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "plain",
+        "template": "{\n    \"response\": \"hello\"\n}",
+        "output": "json",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "3057ecc25e3b0fad"
+            ]
+        ]
     }
 ]
