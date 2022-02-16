@@ -1,6 +1,6 @@
 # Node-RED CI/CD with GitHub Actions
 
-Example setup using Docker and GitHub actiosn to create self-contained flows.
+Example setup using Docker and GitHub Actions to create self-contained Node-RED flows as a service.
 
 # ⚡️ Quick Start
 
