@@ -2,13 +2,13 @@ FROM nodered/node-red
 
 ENV NODE_RED_ENABLE_PROJECTS=false
 ENV NODE_RED_ENABLE_SAFE_MODE=false
-ENV FLOWS=flows.json
+ENV FLOWS=flow.json
 
 COPY package.json .
 RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 
 # COPY settings.js /data/settings.js
-COPY flows_cred.json /data/flows_cred.json
-COPY flows.json /data/flows.json
+COPY flow_cred.json /data/flow_cred.json
+COPY flow.json /data/flow.json
 
 CMD ["npm", "start"]
