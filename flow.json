@@ -1,1 +1,38 @@
-[]
+[
+    {
+        "id": "3728edd405527f57",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "525461a2d13b5440",
+        "type": "http in",
+        "z": "3728edd405527f57",
+        "name": "",
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "3057ecc25e3b0fad"
+            ]
+        ]
+    },
+    {
+        "id": "3057ecc25e3b0fad",
+        "type": "http response",
+        "z": "3728edd405527f57",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 640,
+        "y": 200,
+        "wires": []
+    }
+]
