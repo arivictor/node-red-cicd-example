@@ -16,6 +16,17 @@ Make a get request to `http://127.0.0.1:1880/hello`
 { "response": "hello" }
 ```
 
+Notice you can't access the UI! Enable it in `settings.js` if you need to. This won't affect your local node-red service.
+
+```javascript
+module.export = {
+  // ...
+  
+  disableEditor: false,
+}
+
+```
+
 # ⚡️ Quick Start
 
 1. Fork this repository
