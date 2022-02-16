@@ -6,9 +6,9 @@
     "license": "Apache-2.0",
     "private": true,
     "scripts": {
-        "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS",
-        "debug": "node --inspect=0.0.0.0:9229 $NODE_OPTIONS node_modules/node-red/red.js $FLOWS",
-        "debug_brk": "node --inspect=0.0.0.0:9229 --inspect-brk $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+        "start": "node node_modules/node-red/red.js flow.json",
+        "debug": "node --inspect=0.0.0.0:9229 $NODE_OPTIONS node_modules/node-red/red.js flow.json",
+        "debug_brk": "node --inspect=0.0.0.0:9229 --inspect-brk $NODE_OPTIONS node_modules/node-red/red.js flow.json"
     },
     "dependencies": {
         "node-red": "2.2.1"
