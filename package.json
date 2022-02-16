@@ -1,11 +1,19 @@
 {
-    "name": "test2",
-    "description": "A Node-RED Project",
-    "version": "0.0.1",
-    "dependencies": {
-        "node-red": "2.2.1",
-    },
+    "name": "node-red-docker",
+    "version": "2.2.1",
+    "description": "Low-code programming for event-driven applications",
+    "homepage": "http://nodered.org",
+    "license": "Apache-2.0",
+    "private": true,
     "scripts": {
-        "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+        "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS",
+        "debug": "node --inspect=0.0.0.0:9229 $NODE_OPTIONS node_modules/node-red/red.js $FLOWS",
+        "debug_brk": "node --inspect=0.0.0.0:9229 --inspect-brk $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+    },
+    "dependencies": {
+        "node-red": "2.2.1"
+    },
+    "engines": {
+        "node": ">=12"
     }
 }
